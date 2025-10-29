@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avocado-nomics: Pricing Optimization - ISOM 839</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .reveal section img {
+            border: none;
+            box-shadow: none;
+            max-height: 80vh;
+            max-width: 95vw;
+        }
+        .reveal .slide-number {
+            font-size: 0.6em;
+            background-color: rgba(0, 128, 128, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        .reveal section[data-background-image] {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        /* Custom styling for section dividers */
+        .section-divider {
+            background: linear-gradient(135deg, #00CED1 0%, #20B2AA 100%);
+        }
+        /* Footer with course info */
+        .reveal .footer {
+            position: absolute;
+            bottom: 1em;
+            left: 1em;
+            font-size: 0.5em;
+            color: #666;
+        }
+        /* Navigation hints */
+        .reveal .controls {
+            color: #00CED1;
+        }
+        .reveal .progress {
+            color: #00CED1;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Slide 1: Title Slide -->
+            <section data-background-image="slide1.png" data-background-size="contain">
+                <aside class="notes">
+                    Welcome to Avocado-nomics! This case study demonstrates how to combine historical sales data, pricing optimization, and distribution strategy to maximize revenue. We'll walk through the complete data science pipeline from descriptive analytics through prescriptive optimization.
+                </aside>
+            </section>
+
+            <!-- Slide 2: The Central Question -->
+            <section data-background-image="slide2.png" data-background-size="contain">
+                <aside class="notes">
+                    The fundamental question: How much is too much for an avocado? This isn't just about pricing - it's about understanding the delicate balance between price and demand. Set it too high, and customers walk away. Set it too low, and you leave money on the table.
+                </aside>
+            </section>
+
+            <!-- Slide 3: The Pricing Challenge -->
+            <section data-background-image="slide3.png" data-background-size="contain">
+                <aside class="notes">
+                    This slide illustrates the classic pricing dilemma. Too high: lose customers. Too low: lose profit. The sweet spot exists, but finding it requires data-driven decision making. This is where analytics becomes essential.
+                </aside>
+            </section>
+
+            <!-- Slide 4: The Three Analytics Approaches -->
+            <section data-background-image="slide4.png" data-background-size="contain">
+                <aside class="notes">
+                    Finding optimal price requires the perfect blend of three types of analytics: Descriptive (understanding past trends), Predictive (forecasting future demand), and Prescriptive (determining the best course of action). Like making guacamole, you need the right blend of ingredients.
+                </aside>
+            </section>
+
+            <!-- Slide 5: Agenda Overview -->
+            <section data-background-image="slide5.png" data-background-size="contain">
+                <aside class="notes">
+                    Our journey has 5 parts: (1) Understanding the Great Avocado Dilemma, (2) Unpacking our data's secrets, (3) Predicting customer behavior, (4) Optimizing for revenue, and (5) Seeing the big payoff. Each builds on the previous step.
+                </aside>
+            </section>
+
+            <!-- Slide 6: Section 1 - Great Avocado Dilemma -->
+            <section data-background-image="slide6.png" data-background-size="contain" class="section-divider">
+                <aside class="notes">
+                    Section 1: The supplier's challenge. We have avocados to distribute across multiple regions. Each region has different demand characteristics. How do we price and allocate to maximize revenue while accounting for transportation and waste costs?
+                </aside>
+            </section>
+
+            <!-- Slide 7: Goal Statement -->
+            <section data-background-image="slide7.png" data-background-size="contain">
+                <aside class="notes">
+                    Our goal is clear: develop a complete data science pipeline for pricing and distributing avocados to maximize revenue. This means analyzing historical data, building predictive models, and creating optimization strategies.
+                </aside>
+            </section>
+
+            <!-- Slide 8: Data Science Pipeline -->
+            <section data-background-image="slide8.png" data-background-size="contain">
+                <aside class="notes">
+                    The three-stage pipeline: (1) Descriptive - understand past trends like seasonality and regional preferences, (2) Predictive - forecast future demand based on price and other factors, (3) Prescriptive - find the best course of action to maximize revenue.
+                </aside>
+            </section>
+
+            <!-- Slide 9: Section 2 - Unpacking Data's Secrets -->
+            <section data-background-image="slide9.png" data-background-size="contain" class="section-divider">
+                <aside class="notes">
+                    Section 2: Time to explore our data. We have historical sales data from the Hass Avocado Board. What patterns can we find? What insights are hidden in the numbers? This is the descriptive analytics phase.
+                </aside>
+            </section>
+
+            <!-- Slide 10: Data Elements -->
+            <section data-background-image="slide10.png" data-background-size="contain">
+                <aside class="notes">
+                    Our data contains three key dimensions: calendar date (for seasonal patterns), product information (the avocados themselves), and region (where they're sold). These combine to give us a complete picture of the market.
+                </aside>
+            </section>
+
+            <!-- Slide 11: Seasonal Patterns -->
+            <section data-background-image="slide11.png" data-background-size="contain">
+                <aside class="notes">
+                    Aha! We see predictable peaks during Super Bowl season in February and Cinco de Mayo in May. These seasonal patterns are crucial for forecasting and planning. People love their guacamole during these events!
+                </aside>
+            </section>
+
+            <!-- Slide 12: Regional Analysis -->
+            <section data-background-image="slide12.png" data-background-size="contain">
+                <aside class="notes">
+                    Regional differences are striking. The West coast buys significantly more avocados on average - nearly 3 times as much as some other regions. This geographic variation means we need region-specific pricing and allocation strategies.
+                </aside>
+            </section>
+
+            <!-- Slide 13: Price-Demand Tradeoff -->
+            <section data-background-image="slide13.png" data-background-size="contain">
+                <aside class="notes">
+                    This visualization shows the fundamental tradeoff: on one side, high prices with concerned customers and declining sales; on the other, low prices with happy customers but insufficient profit. The balance point is what we're seeking.
+                </aside>
+            </section>
+
+            <!-- Slide 14: Section 3 - Predicting Guac Habit -->
+            <section data-background-image="slide14.png" data-background-size="contain" class="section-divider">
+                <aside class="notes">
+                    Section 3: Now we build our predictive model. Using machine learning, we'll forecast demand based on price, region, year, and seasonality. This is the predictive analytics phase that bridges description and prescription.
+                </aside>
+            </section>
+
+            <!-- Slide 15: Predictive Model Explanation -->
+            <section data-background-image="slide15.png" data-background-size="contain">
+                <aside class="notes">
+                    Our predictive model learns patterns from historical data - specifically how price, region, and season affect demand. Once trained, it can predict future avocado demand for different pricing scenarios. This becomes a crucial component of our optimization model.
+                </aside>
+            </section>
+
+            <!-- Slide 16: Model Performance -->
+            <section data-background-image="slide16.png" data-background-size="contain">
+                <aside class="notes">
+                    Excellent! Our model achieves an R-squared of 0.90, meaning it explains 90% of the variance in avocado demand. This high accuracy gives us confidence that our predictions will be reliable when we use them in the optimization phase.
+                </aside>
+            </section>
+
+            <!-- Slide 17: Section 4 - Optimizing for Revenue -->
+            <section data-background-image="slide17.png" data-background-size="contain" class="section-divider">
+                <aside class="notes">
+                    Section 4: Time to craft our strategy! Now we take our predictive model and embed it in a mathematical optimization framework. We'll determine optimal prices and supply quantities for each region to maximize total net revenue.
+                </aside>
+            </section>
+
+            <!-- Slide 18: Mathematical Optimization Definition -->
+            <section data-background-image="slide18.png" data-background-size="contain">
+                <aside class="notes">
+                    Mathematical optimization is a method that takes a goal (maximize revenue), decision levers (price and supply per region), and rules (budget constraints, transport costs, waste costs) to find the absolute best possible solution. It's prescriptive analytics at its finest.
+                </aside>
+            </section>
+
+            <!-- Slide 19: Optimization Recipe -->
+            <section data-background-image="slide19.png" data-background-size="contain">
+                <aside class="notes">
+                    Our optimization recipe has three ingredients: (1) The Goal - maximize net revenue, (2) The Levers - price and supply for each region (what we can control), (3) The Rules - constraints like inventory limits, transport costs, and wastage costs.
+                </aside>
+            </section>
+
+            <!-- Slide 20: Section 5 - The Big Payoff -->
+            <section data-background-image="slide20.png" data-background-size="contain" class="section-divider">
+                <aside class="notes">
+                    Section 5: The results are in! Let's see what our optimization model recommends and how much value it creates compared to historical pricing and allocation decisions.
+                </aside>
+            </section>
+
+            <!-- Slide 21: Optimal Pricing Results -->
+            <section data-background-image="slide21.png" data-background-size="contain">
+                <aside class="notes">
+                    Here are the optimal prices by region: $2.00 for West, SouthCentral, and Northeast (high-demand regions), $1.51 for Midsouth, and $1.20 for Plains. Notice how the model sets higher prices in regions with stronger demand and lower transport costs.
+                </aside>
+            </section>
+
+            <!-- Slide 22: Revenue Impact -->
+            <section data-background-image="slide22.png" data-background-size="contain">
+                <aside class="notes">
+                    The bottom line: $42.5 million in optimal net revenue. This represents the best possible outcome given our constraints, predicted demand, and cost structure. But how does this compare to actual historical performance?
+                </aside>
+            </section>
+
+            <!-- Slide 23: 35% Improvement -->
+            <section data-background-image="slide23.png" data-background-size="contain">
+                <aside class="notes">
+                    Incredible! The optimized strategy yields a 35% increase in net revenue compared to actual historical results. This isn't just theoretical - it represents real money left on the table with non-optimized pricing and allocation decisions.
+                </aside>
+            </section>
+
+            <!-- Slide 24: The Complete Journey (duplicate for emphasis) -->
+            <section data-background-image="slide24.png" data-background-size="contain">
+                <aside class="notes">
+                    Let's recap the complete journey: Data (historical sales) → Insights (patterns in seasonality, regions, price sensitivity) → Strategy (optimized pricing and allocation). This is the power of combining analytics and optimization.
+                </aside>
+            </section>
+
+            <!-- Slide 25: Data → Insights → Strategy -->
+            <section data-background-image="slide25.png" data-background-size="contain">
+                <aside class="notes">
+                    The data science pipeline in action: raw data transformed into actionable insights, which inform strategic decisions. This framework applies far beyond avocados - it's the blueprint for data-driven decision making in any domain.
+                </aside>
+            </section>
+
+            <!-- Slide 26: Closing Question -->
+            <section data-background-image="slide26.png" data-background-size="contain">
+                <aside class="notes">
+                    Final thought: What else in your shopping cart is priced this way? Airlines, hotels, ride-sharing, even electricity - dynamic pricing and optimization are everywhere. Understanding these techniques gives you insight into the modern economy. Questions?
+                </aside>
+            </section>
+
+            <!-- Optional: Summary Slide -->
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>Data science pipeline: Descriptive → Predictive → Prescriptive</li>
+                    <li>Predictive models can achieve 90%+ accuracy with good data</li>
+                    <li>Mathematical optimization finds provably best solutions</li>
+                    <li>Result: 35% revenue improvement over historical approach</li>
+                    <li>These techniques apply across industries and domains</li>
+                </ul>
+                <aside class="notes">
+                    Summary of key learning points from tonight's session. These concepts form the foundation for modern data-driven decision making.
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: 'c/t',
+            showSlideNumber: 'all',
+            transition: 'slide',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            controls: true,
+            controlsTutorial: true,
+            progress: true,
+            center: true,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            minScale: 0.2,
+            maxScale: 2.0,
+            
+            // Keyboard shortcuts
+            keyboard: {
+                // Speaker notes toggle
+                83: null, // 's' for speaker view
+                // Overview mode
+                79: null, // 'o' for overview
+            },
+
+            // Enable plugins
+            plugins: [ RevealNotes ],
+
+            // PDF export settings
+            pdfMaxPagesPerSlide: 1,
+            pdfSeparateFragments: false,
+        });
+
+        // Add custom keyboard shortcut for speaker notes
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 's' || event.key === 'S') {
+                // Open speaker notes in new window
+                Reveal.getPlugin('notes').open();
+            }
+        });
+
+        // Display footer with course info
+        const footer = document.createElement('div');
+        footer.className = 'footer';
+        footer.innerHTML = 'ISOM 839 | 7:40pm - 10:00pm';
+        document.querySelector('.reveal').appendChild(footer);
+    </script>
+</body>
+</html>
